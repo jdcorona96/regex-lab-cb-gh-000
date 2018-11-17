@@ -1,12 +1,16 @@
-def starts_with_a_vowel?(word)
+require "pry"
 
+def starts_with_a_vowel?(word)
+  word.match(/^[aeiouAEIOU]/) != nil
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-
+  text.scan(/^un.*ing$/)
+  binding.pry
 end
 
 def words_five_letters_long(text)
+  text.match(/\w{5}/) != nil
 
 end
 
